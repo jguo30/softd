@@ -60,7 +60,9 @@ def split_krewes():
         krewesNew[int(double_split[0])].update({double_split[1]: double_split[2]})
     pd = chooseRandomPd()
     dict_index = math.floor(random.random() * len(krewesNew[pd]))
-    print(dict_index)
+    print(pd)
+    keys = krewesNew[pd].keys()
+    print(keys)
 
 
 
