@@ -1,4 +1,4 @@
-TNPG: SUPER JESUS: Sam Cowan, Jacob Guo
+TNPG: SUPER JESUS
 SoftDev
 K23 -- Working With Bootstrap CSS and CDNs
 2022-11-29
@@ -14,7 +14,7 @@ DISCO:
 - spinner
 - form
 - card
+
 QCC:
 - How does the colored table feature work?
 - Bootstrap has some finicky image sizing formats
-
