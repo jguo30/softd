@@ -1,0 +1,21 @@
+CPS :: Donald Bi, Jacob Guo
+SoftDev pd8
+K27 -- Basic functions in JavaScript
+2023-04-04t
+
+DISCO
+-----------------------------------------------------------------
+* need #lang scheme at the top of drracket
+* need to choose language in drracket
+* relearned scheme wow
+* put parenthesis outside function call not between
+=================================================================
+
+QCC
+-----------------------------------------------------------------
+* why is scheme like this?
+* why js so cool?
+=================================================================
+
+
+
