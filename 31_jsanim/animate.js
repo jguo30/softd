@@ -1,47 +1,51 @@
+/*
+Guoblins: Yat Long Chan, Jacob Guo
+SoftDev pd8
+K31 -- animation in canvas JS
+2023-04-26w
+*/
+
 var c = document.getElementById("playground");
 var dotButton = document.getElementById("buttonCircle");
 var  stopButton = document.getElementById("buttonStop");
 
 var ctx = c.getContext("2d");
 
-ctx.fillStyle = "blue";
+ctx.fillStyle = "#ADD8E6";
 
 var requestID;
 
-var clear = (e) => {
+var clear = () => {
     ctx.clearRect(0, 0, c.width, c.height);
 }
 
 var radius = 100;
 var growing = true;
 
-var drawDot = (e) =>{
-    window.cancelAnimationFrame(requestID);
-    
+var drawDot = () =>{
     clear();
-    if(radius === 250) {growing = false}
+    if(radius === c.height / 2) {growing = false}
     if(radius === 0) {growing = true}
-    if (growing){
-         radius += 5;
-     }
-     else{
-         radius -= 5;
-     }
-     console.log(radius);
-     ctx.beginPath();
-     ctx.arc(c.width / 2, c.height / 2, radius, 0, Math.PI * 2);
-     ctx.stroke();
-     ctx.fill();
-    
-    requestID = window.requestAnimationFrame(drawDot);
-    
+        if (growing){
+            radius++;
+        }
+        else{
+            radius--;
+        }
+        console.log(radius);
+        ctx.beginPath();
+        ctx.arc(c.width / 2, c.height / 2, radius, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.fill();
+        window.cancelAnimationFrame(requestID);
+        requestID = window.requestAnimationFrame(drawDot);
 }
 
-var stopIt = (e) => {
+var stopIt = () => {
     console.log("stopit invoked...");
-    console.long( requestID );
-    
     window.cancelAnimationFrame(requestID);
+    console.log("requestID cancelled");
+
 }
 
 
