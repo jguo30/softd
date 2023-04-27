@@ -31,6 +31,6 @@ table.addEventListener('click', clicky, true);
 //table.addEventListener('click', clicky, false);
 
 ORDER TYPED IN DOES NOT MATTER (WHERE THE FUNCTIONS ARE TYPED)
-When true, POPUPS are based on HEIRARCHY (big guys #1) ARE PRIORITIZED (BIGGER ID'S WILL BE FIRST) (table, tr, td)
-When false, POPUPS are based on REVERSE HEIRARCHY (small guys #1). (td, tr, table)
+CAPTURING: When true, POPUPS are based on HEIRARCHY (big guys #1) ARE PRIORITIZED (BIGGER ID'S WILL BE FIRST) (table, tr, td)
+BUBBLING : When false, POPUPS are based on REVERSE HEIRARCHY (small guys #1). (td, tr, table) (DEFAULT) 
 Falses will always be after trues.
