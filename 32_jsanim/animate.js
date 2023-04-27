@@ -59,25 +59,26 @@ var dvdLogoSetup = function() {
     var rectX = Math.floor(Math.random() * 540);
     var rectY = Math.floor(Math.random() * 560);
 
-    var xVel = 20;
-    var yVel = 20;
+    var xVel = 1;
+    var yVel = 1;
 
     var logo = new Image();
     logo.src = "logo_dvd.jpg";
 
     var dvdLogo = function() {
-        ctx.clearRect(0, 0, c.width. c.height );
+        ctx.clearRect(0, 0, c.width, c.height );
         ctx.drawImage( logo, rectX, rectY, rectWidth, rectHeight);
-        if (rectY <= 0 || rectY >= 560 ){
-            xVel = xVel * -1;
+        if (rectY <= 0 || rectY >= c.height - rectHeight ){
+            yVel = -yVel;
         }
-        if (rectX <= 0 || rectX >= 540 ){
-            yVel = yVel * -1;
+        if (rectX <= 0 || rectX >= c.width - rectWidth ){
+            xVel = -xVel;
         }
         rectX = rectX + xVel;
         rectY = rectY + yVel;
         requestID = window.requestAnimationFrame(dvdLogo);
     };
+    dvdLogo();
 };
 
 
