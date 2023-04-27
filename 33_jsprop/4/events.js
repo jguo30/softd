@@ -20,15 +20,18 @@ var clicky = function(e) {
 //Q: What effect does the boolean arg have in each?
 //   (Leave exactly 1 version uncommented to test...)
 
+table.addEventListener('click', clicky, true);
+// table.addEventListener('click', clicky, false);
+
 for (var x=0; x < tds.length; x++) {
-  tds[x].addEventListener('click', clicky, true);
-  //tds[x].addEventListener('click', clicky, false);
+  // tds[x].addEventListener('click', clicky, true);
+  tds[x].addEventListener('click', clicky, false);
 }
 
 for (x=0; x < trs.length; x++) {
   trs[x].addEventListener('click', clicky, true);
-  //trs[x].addEventListener('click', clicky, false);
+  // trs[x].addEventListener('click', clicky, false);
 }
 
-table.addEventListener('click', clicky, true);
-//table.addEventListener('click', clicky, false);
+// table.addEventListener('click', clicky, true);
+// // table.addEventListener('click', clicky, false);
